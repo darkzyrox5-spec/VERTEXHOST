@@ -1,0 +1,2 @@
+# VERTEXHOST
+VERTEXHOST Discord Bot
