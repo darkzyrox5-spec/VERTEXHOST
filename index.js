@@ -501,6 +501,7 @@ client.on('interactionCreate', async interaction => {
       ephemeral: true
     });
   }
+});
 
 // REMAINING COMMANDS
 client.on('interactionCreate', async interaction => {
@@ -619,7 +620,7 @@ client.on('interactionCreate', async interaction => {
 
   // OWNER AUTO REPLY
   if (name === 'ownerreply') {
-    config.ownerReply = interaction.options.getString('text');
+    config.ownerReply = interaction.options.getString('message');
     saveConfig(id, config);
 
     return interaction.reply({
@@ -630,7 +631,7 @@ client.on('interactionCreate', async interaction => {
 
   // CHAIRMAN AUTO REPLY
   if (name === 'chairmanreply') {
-    config.chairmanReply = interaction.options.getString('text');
+    config.chairmanReply = interaction.options.getString('message');
     saveConfig(id, config);
 
     return interaction.reply({
